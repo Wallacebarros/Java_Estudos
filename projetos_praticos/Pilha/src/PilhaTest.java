@@ -36,4 +36,15 @@ public class PilhaTest {
         pilha.adicionar("Elemento 2");
         assertEquals("Elemento 2", pilha.topo());
     }
+
+    @Test
+    public void cheio(){
+        for(int i=0; i < 9; i++){
+            pilha.adicionar("elementoX");
+        }
+        pilha.adicionar("ultimo elemento");
+        pilha.adicionar("elemento exedente");
+
+        assertEquals("ultimo elemento", pilha.topo());
+    }
 }
