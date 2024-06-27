@@ -12,4 +12,9 @@ public class Pilha {
         quantidade++;
     }
 
+    public  void retirar() {
+        elementos[quantidade - 1] = "";
+        quantidade--;
+    }
+
 }
