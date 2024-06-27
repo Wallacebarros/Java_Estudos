@@ -12,9 +12,13 @@ public class Pilha {
         quantidade++;
     }
 
-    public  void retirar() {
+    public void retirar() {
         elementos[quantidade - 1] = "";
         quantidade--;
+    }
+
+    public String topo() {
+        return elementos[quantidade - 1];
     }
 
 }
