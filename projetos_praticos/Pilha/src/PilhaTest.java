@@ -29,4 +29,11 @@ public class PilhaTest {
         pilha.retirar();
         assertEquals(true, pilha.vazia());
     }
+
+    @Test
+    public void topo(){
+        pilha.adicionar("Elemento 1");
+        pilha.adicionar("Elemento 2");
+        assertEquals("Elemento 2", pilha.topo());
+    }
 }
