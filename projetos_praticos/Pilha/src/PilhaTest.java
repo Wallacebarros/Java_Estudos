@@ -16,4 +16,10 @@ public class PilhaTest {
     public void vazia(){
         assertEquals(true, pilha.vazia());
     }
+
+    @Test
+    public void adicianar(){
+        pilha.adicionar("Elemento 1");
+        assertEquals(false, pilha.vazia());
+    }
 }
