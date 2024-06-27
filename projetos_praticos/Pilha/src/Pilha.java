@@ -8,8 +8,10 @@ public class Pilha {
     }
 
     public void adicionar(String elemento) {
-        elementos[quantidade] = elemento;
-        quantidade++;
+        if(quantidade < 10){
+            elementos[quantidade] = elemento;
+            quantidade++;
+        }
     }
 
     public void retirar() {
