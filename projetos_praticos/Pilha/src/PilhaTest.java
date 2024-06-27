@@ -22,4 +22,11 @@ public class PilhaTest {
         pilha.adicionar("Elemento 1");
         assertEquals(false, pilha.vazia());
     }
+
+    @Test
+    public void retirar(){
+        pilha.adicionar("Elemento 1");
+        pilha.retirar();
+        assertEquals(true, pilha.vazia());
+    }
 }
