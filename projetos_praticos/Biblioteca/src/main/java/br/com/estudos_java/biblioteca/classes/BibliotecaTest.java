@@ -18,4 +18,10 @@ public class BibliotecaTest {
     public void vazia() {
         assertTrue(b.vazia());
     }
+
+    @Test
+    public void adicinarLivro() {
+        b.adicionarLivro("Meu Livro");
+        assertFalse(b.vazia());
+    }
 }
