@@ -5,7 +5,7 @@ public class Biblioteca {
     private ArrayList<String> livros;
 
     public Biblioteca() {
-        livros = new ArrayList<String>();
+        livros = new ArrayList<>();
     }
 
     public boolean vazia() {
@@ -15,4 +15,17 @@ public class Biblioteca {
     public void adicionarLivro(String string) {
         livros.add(string);
     }
+
+    public ArrayList<String> listarLivros() {
+        return new ArrayList<>(livros);
+    }
+
+        public String pegarLivro(String string) {
+            if (livros.contains(string)) {
+                livros.remove(string);
+                return string;
+            }
+            return null;
+        }
+
 }
