@@ -2,7 +2,7 @@ package br.com.estudos_java.biblioteca.classes;
 
 import java.util.ArrayList;
 public class Biblioteca {
-    private ArrayList<String> livros;
+    private ArrayList<Object> livros;
 
     public Biblioteca() {
         livros = new ArrayList<>();
@@ -12,20 +12,20 @@ public class Biblioteca {
         return livros.isEmpty();
     }
 
-    public void adicionarLivro(String string) {
-        livros.add(string);
+    public void adicionarLivro(Object object) {
+        livros.add(object);
     }
 
-    public ArrayList<String> listarLivros() {
+    public ArrayList<Object> listarLivros() {
         return new ArrayList<>(livros);
     }
 
-        public String pegarLivro(String string) {
-            if (livros.contains(string)) {
-                livros.remove(string);
-                return string;
-            }
-            return null;
+    public Object pegarLivro(Object object) {
+        if (livros.contains(object)) {
+            livros.remove(object);
+            return object;
         }
+        return null;
+    }
 
 }

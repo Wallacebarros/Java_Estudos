@@ -11,10 +11,15 @@ import org.junit.Test;
 
 public class BibliotecaTest {
     private Biblioteca b;
+    private Livro l1, l2;
+    ArrayList<Object> expect;
 
     @Before
     public void before() {
         b = new Biblioteca();
+        expect = new ArrayList<>();
+        l1 = new Livro("Livro 1", "Autor 1", 100);
+        l2 = new Livro("Livro 2", "Autor 2", 200);
     }
     
     @Test
@@ -23,28 +28,28 @@ public class BibliotecaTest {
     }
 
     @Test
-    public void adicinarLivro() {
-        b.adicionarLivro("Meu Livro");
+    public void adicionarLivro() {
+        b.adicionarLivro(l1);
         assertFalse(b.vazia());
     }
     
     @Test
     public void listarLivros() {
-        b.adicionarLivro("Livro 1");
-        b.adicionarLivro("Livro 2");
+        b.adicionarLivro(l1);
+        b.adicionarLivro(l2);
 
-        ArrayList<String> expect = new ArrayList<>();
-        expect.add("Livro 1");
-        expect.add("Livro 2");
+        expect.add(l1);
+        expect.add(l2);
 
         assertEquals(expect , b.listarLivros());
     }
 
     @Test
     public void pegarLivro() {
-        b.adicionarLivro("Livro 1");
-        
-        assertEquals("Livro 1", b.pegarLivro("Livro 1"));
+        b.adicionarLivro(l1);
+        expect.add(l1);
+
+        assertEquals(l1, b.pegarLivro(l1));
         assertTrue(b.vazia());
     }
 }
