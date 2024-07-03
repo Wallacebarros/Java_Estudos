@@ -15,6 +15,8 @@ public class App {
 
     public static void b(int i) throws Exception {
         System.out.println("Execultando b(): " + i);
-        throw new Exception("Minha exeption");
+        if (i < 100) {
+            throw new Exception("Minha exeption");
+        }
     }
 }
